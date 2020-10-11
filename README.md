@@ -1,8 +1,6 @@
 ### Canvas Drawer
 
-``Documentation: https://docs.trustar.co/api/v13/index.html 
- Python SDK documentation: https://docs.trustar.co/sdk/index.html ..the “add_terms_to_whitelist(..)” 
- method documentation: https://docs.trustar.co/sdk/TruStar/``
+``Github repository on :``
  
 ### Prerequisites
  python 3.x
@@ -21,7 +19,10 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 #Execute main scheduler script
+you want to set a file called input.txt in the root of the project
+
 python3 main.py
+you can expect the output on the same place
 
 #kubernetes
 
