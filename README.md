@@ -24,6 +24,8 @@ you want to set a file called input.txt in the root of the project (the file sho
 python3 main.py
 you can expect the output on the same place
 
+#Testing
+/run-test.sh #Testing
 
 #kubernetes
 
