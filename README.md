@@ -1,6 +1,6 @@
 ### Canvas Drawer
 
-``Github repository on :``
+``Github repository: https://github.com/Delerik/canvas_drawer.git``
  
 ### Prerequisites
  python 3.x
@@ -19,10 +19,11 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 #Execute main scheduler script
-you want to set a file called input.txt in the root of the project
+you want to set a file called input.txt in the root of the project (the file should not have empty lines)
 
 python3 main.py
 you can expect the output on the same place
+
 
 #kubernetes
 
