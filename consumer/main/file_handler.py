@@ -12,6 +12,7 @@ def get_file_input_info():
         lines = [a.replace('\n', '').replace('\n', '\r') for a in lines]
         input_file.close()
         logger.debug('Reader from file success')
+        print(lines)
         return lines
     except Exception as e:
         logger.error("error during file_reader consumer call")
