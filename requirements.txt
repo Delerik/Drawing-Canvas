@@ -1,0 +1,4 @@
+python-crontab==2.5.1
+mock==4.0.0
+loguru==0.5.1
+numpy==1.19.2

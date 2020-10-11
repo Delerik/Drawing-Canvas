@@ -1,0 +1,53 @@
+version: '2.1'
+services:
+  postgres:
+    container_name: postgres
+    ports:
+    - 54321:5432/tcp
+    image: postgres:9-alpine
+    environment:
+      POSTGRES_USER: msdev
+      POSTGRES_PASSWORD: msdev
+      POSTGRES_DB: msdev
+    networks:
+      - bridge
+    volumes:
+    - ${PWD}/scripts:/scripts
+    - ${PWD}/scripts/database/DDL.sql:/docker-entrypoint-initdb.d/ddl.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U msdev"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+
+  wiremock:
+      image: rodolpheche/wiremock
+      container_name: wiremock2
+      ports:
+        - 10101:8080/tcp
+      volumes:
+        - ${PWD}/scripts/incidentsMock:/home/wiremock
+
+      networks:
+        - bridge
+
+#  ms-service:
+#      container_name: ms-service
+#      ports:
+#      - 10101:10101/tcp
+#      - 8000:8000/tcp
+#      environment:
+#      - PROFILE=qa
+#      tty: true
+#      build: ${PWD}/target/docker/stage
+#      stdin_open: true
+#      volumes:
+#      - ${PWD}/logs:/opt/docker/logs
+#      networks:
+#        - bridge
+#      links:
+#      - postgres
+
+networks:
+  bridge:
+    driver: bridge

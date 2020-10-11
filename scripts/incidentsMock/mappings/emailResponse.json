@@ -1,0 +1,61 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "url": "/client/project/discovery/exportdomains/?discovery_id=4631253&discovery_tab_type=incidents",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "bodyJson.json"
+      }
+    },
+    {
+      "request": {
+        "url": "/teams",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "543447"
+      }
+    },
+    {
+      "request": {
+        "url": "/restService/v1/tickets?description=DTP%20discovery%20found%20on%202020-06-13%2004:11:06%0AHistory:%5B'Potential%20Data%20Leak%20(1%20record)%20from%20%E2%80%9C16ks%20compilation/baza%E2%80%9D%20database%20found%20on%20June%2013,%202020%20%5Blow%20risk%5D'%5D%0AThe%20data%20we%20have%20been%20able%20to%20retrieve%20%20login%20stephensanderfergrowfinancialorg%20password%20surreal1&idCompany=549432&title=%5B1986569%5D%5BData%20Leak%5DPassword%20Collection%2016ks%20Compilation/baza&url=http:www.growfinancial.org/1986569&idLoggedAgent=228",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": "111111"
+      }
+
+    },
+    {
+      "request": {
+        "url": "/restService/v1/tickets/111111/events/accepted",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": ""
+      }
+
+    },
+    {
+      "request": {
+        "url": "/restService/v1/tickets/111111/events/close?generateReport=True",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "body": ""
+      }
+
+    }
+  ],
+  "meta": {
+    "total": 1
+  }
+
+}
