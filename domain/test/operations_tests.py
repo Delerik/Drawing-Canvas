@@ -25,6 +25,10 @@ class TestMyModule(unittest.TestCase):
         canvas = np.array([[' ' for x in range(int(4))] for y in range(int(20))])
         canvas[1, 1] = 'x'
         canvas[1, 2] = 'x'
+        print('result')
+        print(val1)
+        print('canvas')
+        print(canvas)
         self.assertEqual(str(val1), str(canvas))
 
     @mock.patch('domain.main.operations')
@@ -40,6 +44,10 @@ class TestMyModule(unittest.TestCase):
         canvas[2, 0] = 'x'
         canvas[2, 1] = 'x'
         canvas[2, 2] = 'x'
+        print('result')
+        print(val1)
+        print('canvas')
+        print(canvas)
         self.assertEqual(str(val1), str(canvas))
 
     @mock.patch('domain.main.operations')
@@ -47,5 +55,9 @@ class TestMyModule(unittest.TestCase):
         print('test 4')
         val1 = fill_area(np.array([[' ' for x in range(int(4))] for y in range(int(20))]), 0, 0, 'c')
         canvas = np.array([['c' for x in range(int(4))] for y in range(int(20))])
+        print('result')
+        print(val1)
+        print('canvas')
+        print(canvas)
         self.assertEqual(str(val1), str(canvas))
 

@@ -4,8 +4,6 @@ from loguru import logger
 
 def create_canvas(w, h):
     matrix = np.array([[' ' for x in range(int(w))] for y in range(int(h))])
-    print('created canvas')
-    print(str(matrix).replace('\n', ''))
     return matrix
 
 
