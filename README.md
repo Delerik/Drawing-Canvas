@@ -25,7 +25,8 @@ python3 main.py
 you can expect the output on the same place
 
 #Testing
-/run-test.sh #Testing
+python -m unittest domain/test/operations_tests.py
+
 
 #kubernetes
 
