@@ -18,7 +18,7 @@
 ``pip install --upgrade pip``
 ``pip install -r requirements.txt``
 
-### Execute main scheduler script
+### Execute main script
 you want to set a file called input.txt in the root of the project (the file should not have empty lines)
 
 ``python3 main.py``
